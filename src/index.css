@@ -1,0 +1,284 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+
+    /* SERPIC Brand Colors - Red Primary */
+    --primary: 0 84% 60%; /* SERPIC Red */
+    --primary-foreground: 0 0% 98%;
+
+    /* SERPIC Brand Colors - Grey Secondary */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 15%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 91%;
+    --input: 0 0% 91%;
+    --ring: 0 84% 60%; /* SERPIC Red for focus rings */
+
+    --radius: 0.5rem;
+
+    /* SERPIC Sidebar Colors */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 25%;
+    --sidebar-primary: 0 84% 60%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 95%;
+    --sidebar-accent-foreground: 0 84% 60%;
+    --sidebar-border: 0 0% 88%;
+    --sidebar-ring: 0 84% 60%;
+
+    /* SERPIC Gradient Variables */
+    --gradient-start: 0 0% 98%;
+    --gradient-end: 0 0% 95%;
+  }
+
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 98%;
+
+    /* SERPIC Dark Mode Colors */
+    --primary: 0 84% 65%;
+    --primary-foreground: 0 0% 11%;
+
+    --secondary: 0 0% 17%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 17%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 0 0% 17%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 17%;
+    --input: 0 0% 17%;
+    --ring: 0 84% 65%;
+
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 85%;
+    --sidebar-primary: 0 84% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 84% 65%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 0 84% 65%;
+
+    --gradient-start: 0 0% 8%;
+    --gradient-end: 0 0% 12%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* SERPIC Brand Gradient Backgrounds */
+  .serpic-gradient {
+    background: linear-gradient(135deg, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
+  }
+  
+  .serpic-gradient-dark {
+    background: linear-gradient(135deg, hsl(0 0% 15%), hsl(0 0% 8%));
+  }
+}
+
+/* ============ THEME PALETTES (ERP INSPIRED) ============ */
+/* Theme: SERPIC Red (default) — same as :root above */
+
+/* Theme: Azul — Royal blue / deep indigo (#1E40AF / #2563EB) */
+.theme-sap-blue {
+  --background: 217 40% 97%;
+  --foreground: 224 55% 14%;
+  --card: 0 0% 100%;
+  --card-foreground: 224 55% 14%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 224 55% 14%;
+  --primary: 224 76% 40%;            /* #1E40AF */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 221 70% 90%;
+  --secondary-foreground: 224 60% 22%;
+  --muted: 219 45% 92%;
+  --muted-foreground: 222 30% 35%;
+  --accent: 221 83% 88%;
+  --accent-foreground: 224 70% 24%;
+  --destructive: 0 74% 45%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 220 45% 82%;
+  --input: 220 45% 78%;
+  --ring: 221 83% 53%;               /* #2563EB */
+  --sidebar-background: 224 71% 26%;
+  --sidebar-foreground: 214 60% 94%;
+  --sidebar-primary: 217 91% 60%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 224 60% 34%;
+  --sidebar-accent-foreground: 210 100% 92%;
+  --sidebar-border: 224 50% 34%;
+  --sidebar-ring: 217 91% 60%;
+  --gradient-start: 221 70% 96%;
+  --gradient-end: 221 70% 88%;
+}
+
+/* Theme: Morado — Intense purple (#6B21A8 / #7C3AED) */
+.theme-odoo-minimal {
+  --background: 280 45% 98%;
+  --foreground: 273 55% 16%;
+  --card: 0 0% 100%;
+  --card-foreground: 273 55% 16%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 273 55% 16%;
+  --primary: 274 66% 39%;            /* #6B21A8 */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 275 65% 91%;
+  --secondary-foreground: 274 60% 24%;
+  --muted: 276 45% 93%;
+  --muted-foreground: 275 25% 38%;
+  --accent: 262 83% 90%;
+  --accent-foreground: 274 60% 26%;
+  --destructive: 0 74% 48%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 276 40% 84%;
+  --input: 276 40% 80%;
+  --ring: 262 83% 58%;               /* #7C3AED */
+  --sidebar-background: 274 60% 24%;
+  --sidebar-foreground: 275 60% 94%;
+  --sidebar-primary: 262 83% 66%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 274 50% 34%;
+  --sidebar-accent-foreground: 275 90% 92%;
+  --sidebar-border: 274 45% 34%;
+  --sidebar-ring: 262 83% 66%;
+  --gradient-start: 280 60% 97%;
+  --gradient-end: 275 65% 89%;
+}
+
+/* Theme: Verde Azulado — Deep teal / emerald (#0F766E / #0D9488) */
+.theme-dynamics-analytics {
+  --background: 174 40% 97%;
+  --foreground: 180 55% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 180 55% 12%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 180 55% 12%;
+  --primary: 175 77% 26%;            /* #0F766E */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 173 60% 88%;
+  --secondary-foreground: 176 65% 18%;
+  --muted: 174 40% 92%;
+  --muted-foreground: 178 25% 32%;
+  --accent: 172 66% 86%;
+  --accent-foreground: 176 70% 18%;
+  --destructive: 4 76% 46%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 174 35% 80%;
+  --input: 174 35% 76%;
+  --ring: 174 84% 32%;               /* #0D9488 */
+  --sidebar-background: 178 70% 16%;
+  --sidebar-foreground: 172 55% 92%;
+  --sidebar-primary: 172 66% 50%;
+  --sidebar-primary-foreground: 180 70% 12%;
+  --sidebar-accent: 177 55% 24%;
+  --sidebar-accent-foreground: 172 80% 88%;
+  --sidebar-border: 177 45% 26%;
+  --sidebar-ring: 172 66% 50%;
+  --gradient-start: 174 50% 97%;
+  --gradient-end: 173 60% 88%;
+}
+
+/* Theme: Gris Oscuro — Charcoal / slate (#0F172A / #1E293B / #334155) */
+.theme-charcoal {
+  --background: 210 30% 97%;
+  --foreground: 222 47% 11%;         /* #0F172A */
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --primary: 217 33% 17%;            /* #1E293B */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 214 32% 91%;
+  --secondary-foreground: 222 47% 11%;
+  --muted: 213 27% 92%;
+  --muted-foreground: 215 20% 30%;
+  --accent: 215 28% 88%;
+  --accent-foreground: 222 47% 11%;
+  --destructive: 0 74% 45%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 214 25% 82%;
+  --input: 214 25% 78%;
+  --ring: 215 25% 27%;               /* #334155 */
+  --sidebar-background: 222 47% 11%;
+  --sidebar-foreground: 210 40% 96%;
+  --sidebar-primary: 215 25% 45%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 217 33% 22%;
+  --sidebar-accent-foreground: 210 40% 96%;
+  --sidebar-border: 217 30% 26%;
+  --sidebar-ring: 215 25% 45%;
+  --gradient-start: 210 30% 98%;
+  --gradient-end: 214 32% 90%;
+
+}
+
+
+
+@layer components {
+  /* SERPIC Brand Button Variants */
+  .btn-serpic-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 border-primary;
+  }
+  
+  .btn-serpic-accent {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 border-border;
+  }
+  
+  /* SERPIC Card Variants */
+  .card-serpic {
+    @apply border-l-4 border-l-primary bg-card shadow-sm hover:shadow-md transition-shadow;
+  }
+  
+  .card-serpic-accent {
+    @apply border-l-4 border-l-secondary bg-card shadow-sm hover:shadow-md transition-shadow;
+  }
+}
+
+@layer utilities {
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}

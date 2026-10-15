@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1790107757800,
+      "tag": "0000_create_garantias_table",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1790107784207,
+      "tag": "0001_backfill_garantias_from_jsonb",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1791845093404,
+      "tag": "0002_restrict_roles_select_to_admins",
+      "breakpoints": true
+    }
+  ]
+}
